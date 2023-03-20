@@ -21,7 +21,7 @@ import com.saytoonz.cryptocurrency.presentation.coin_detail.components.CoinTag
 import com.saytoonz.cryptocurrency.presentation.coin_detail.components.TeamListItem
 
 @Composable
-fun CoinListScreen(
+fun CoinDetailScreen(
     viewModel: CoinDetainViewModel = hiltViewModel()
 ) {
     val state = viewModel.state.value

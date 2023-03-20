@@ -18,7 +18,6 @@ import javax.inject.Inject
 class CoinDetainViewModel @Inject constructor(
     private val getCoinUseCase: GetCoinUseCase,
     savedStateHandle: SavedStateHandle
-
 ) : ViewModel() {
     private val _state = mutableStateOf(CoinDetailUiState())
     val state: State<CoinDetailUiState> = _state
@@ -40,11 +39,9 @@ class CoinDetainViewModel @Inject constructor(
                     }
                     is Resources.Loading -> {
                         _state.value = CoinDetailUiState(isLoading = true)
-
                     }
                     is Resources.Success -> {
                         _state.value = CoinDetailUiState(coin = resources.data)
-
                     }
                 }
             }.launchIn(viewModelScope)
